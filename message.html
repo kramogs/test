@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Message</title>
+  <!-- Page-specific styles -->
+  <link rel="stylesheet" href="css/message.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar closed" id="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="dashboard.html">🏠 Dashboard</a></li>
+      <li><a href="message.html" class="active">📜 Random Message</a></li>
+      <li><a href="songs.html">🎵 Random Songs</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <main class="dashboard full" id="dashboard">
+    <header class="topbar">
+      <button id="menuBtn">☰</button>
+      <h1>Random Message</h1>
+    </header>
+
+    <section class="content">
+      <div class="card" id="messageCard">
+        <p id="messageText">Hi</p>
+        <button id="newMessageBtn">Click me</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/menu.js"></script>
+  <script src="js/message.js"></script>
+</body>
+</html>
+
