@@ -1,0 +1,76 @@
+/* Reset & full height */
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+
+/* Purple gradient background */
+body {
+  background: url("background.jpg") no-repeat center center fixed,
+              linear-gradient(135deg, #7b2cff, #5a00b8);
+  background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.card {
+  background: #ffffff; /* solid white */
+  color: #333;
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  border: 1px solid #e5e5e5; /* subtle gray border like paper edges */
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Message styling */
+.message h1 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #5a00b8;
+  font-weight: 600;
+}
+.message p {
+  font-size: 1.05rem;
+  margin: 0;
+  line-height: 2;
+  color: #444;
+}
+
+/* Close button container (keeps button below the card) */
+.button-container {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* Button styling */
+.close-btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  background: #7b2cff;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+.close-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+
+
+
+

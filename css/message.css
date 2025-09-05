@@ -1,0 +1,162 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  
+  /* Background image */
+  background: url("background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  
+  /* Overlay effect */
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5); /* light overlay */
+  z-index: -1; /* stays behind content */
+}
+
+.container {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #6a00ff;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: transform 0.3s ease;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.sidebar ul li a:hover {
+  color: #ffd700;
+}
+
+/* Hide sidebar when toggled */
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+/* Main dashboard */
+.dashboard {
+  margin-left: 220px;
+  padding: 20px;
+  flex: 1;
+  transition: margin-left 0.3s ease;
+}
+
+.dashboard.full {
+  margin-left: 0;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#menuBtn {
+  font-size: 20px;
+  margin-right: 15px;
+  padding: 8px 12px;
+  cursor: pointer;
+  background: #6a00ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Media grid */
+.image-grid, .video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.image-grid img, .video-grid video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* Center card in content */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Card style */
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Message text */
+#messageText {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Button */
+#newMessageBtn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: #7b2cff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#newMessageBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
